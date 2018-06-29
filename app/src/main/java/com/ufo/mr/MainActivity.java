@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 bTest.testCallback(MainActivity.this, "bbb", new MethoProxyCallBack() {
                     @Override
                     public void callBack(String jsonStr) {
-                        Toast.makeText(MainActivity.this, "moudle-a.testCallback()===para:"+jsonStr, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "moudle-a.testCallback()===para:" + jsonStr, Toast.LENGTH_SHORT).show();
                     }
                 });
             }
