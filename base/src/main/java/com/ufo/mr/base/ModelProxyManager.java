@@ -2,7 +2,7 @@ package com.ufo.mr.base;
 
 import java.util.HashMap;
 
-public class ModelProxyManager implements IMethodBaseProxy {
+public class ModelProxyManager   {
     private HashMap<String, IMethodBaseProxy> methodProxyMap = new HashMap<>();
 
     public static class ModelProxyManagerHolder {
@@ -32,7 +32,6 @@ public class ModelProxyManager implements IMethodBaseProxy {
      * @param paras      方法参数
      * @return
      */
-    @Override
     public boolean envoke(String modelTag, String methodName, Object[] paras) {
         if (methodProxyMap != null && methodProxyMap.containsKey(modelTag)) {
             IMethodBaseProxy methodProxy = methodProxyMap.get(modelTag);
@@ -43,8 +42,5 @@ public class ModelProxyManager implements IMethodBaseProxy {
         return false;
     }
 
-    @Override
-    public String getTag() {
-        return null;
-    }
+
 }
